@@ -12,7 +12,8 @@ body {
   background-image: url('Assets/JemEgg.png'); /* Replace with your actual logo file name */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 800px; /* Adjust size as needed */
+  /* background-size: 800px; /* Adjust size as needed */
+  background-size: cover; /* Adjust size as needed */
   opacity: 1; /* Keep full page visible */
 }
 
@@ -293,6 +294,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
