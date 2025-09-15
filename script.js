@@ -194,14 +194,15 @@ document.addEventListener("keydown", (e) => {
   // Check the current key against the sequence
   if (e.key === konami[position]) {
     position++;
-    if (position === konami.length) {
-      alert("Boo!");
-      position = 0; // reset after success
-    }
+   if (position === konami.length) {
+  openTetris();
+  position = 0;
+}
   } else {
     position = 0; // reset if wrong key
   }
 });
+
 
 
 
