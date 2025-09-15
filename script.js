@@ -175,6 +175,16 @@ window.addEventListener('load', () => {
 
 
 
+let konami = [38,38,40,40,37,39,37,39,66,65];
+let input = [];
+document.addEventListener("keydown", e => {
+  input.push(e.keyCode);
+  if (input.toString().indexOf(konami) >= 0) {
+    openModal('tetris-modal'); // or trigger another hidden thing
+    input = [];
+  }
+});
+
 
 
 
