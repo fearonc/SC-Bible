@@ -175,6 +175,16 @@ window.addEventListener('load', () => {
 
 
 
+function openTetris() {
+  document.getElementById("tetris-modal").style.display = "block";
+}
+
+function closeTetris() {
+  document.getElementById("tetris-modal").style.display = "none";
+}
+
+
+
 // Konami code sequence
 const konami = [
   "ArrowUp", "ArrowUp",
@@ -202,6 +212,7 @@ document.addEventListener("keydown", (e) => {
     position = 0; // reset if wrong key
   }
 });
+
 
 
 
