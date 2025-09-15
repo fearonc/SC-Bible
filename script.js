@@ -28,13 +28,13 @@ document.addEventListener('mousemove', function(e) {
   document.body.style.backgroundPosition = `calc(50% + ${xOffset}px) calc(50% + ${yOffset}px)`;
 
   // Catalogue title
-  const title = document.querySelector('.catalogue-title');
+  const title = document.querySelector('.sc-title');
   if (title) {
     title.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${yOffset}px))`;
   }
 
   // Logo
-  const logo = document.querySelector('.catalogue-logo');
+  const logo = document.querySelector('.sc-logo');
   if (logo) {
     logo.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${yOffset}px))`;
   }
@@ -112,26 +112,26 @@ window.addEventListener('load', () => {
 
 
 // List of cursor images
-const cursors = [
-  'Aly.png',
-  'Connor.png',
-  'Katherine.png',
-  'Mike.png',
-  'George.png'
-];
-
-let cursorIndex = 0;
-
-// Change cursor every 500ms
-setInterval(() => {
-  cursorIndex = (cursorIndex + 1) % cursors.length;
-  document.body.style.cursor = `url(${cursors[cursorIndex]}) 0 0, auto`;
-
-  // ⚡ force repaint hack
-  body.style.pointerEvents = 'none';
-  void body.offsetHeight; // trigger reflow
-  body.style.pointerEvents = '';
-}, 1000);
+//const cursors = [
+//  'Aly.png',
+//  'Connor.png',
+//  'Katherine.png',
+//  'Mike.png',
+//  'George.png'
+//];
+//
+//let cursorIndex = 0;
+//
+//// Change cursor every 500ms
+//setInterval(() => {
+//  cursorIndex = (cursorIndex + 1) % cursors.length;
+//  document.body.style.cursor = `url(${cursors[cursorIndex]}) 0 0, auto`;
+//
+//  // ⚡ force repaint hack
+//  body.style.pointerEvents = 'none';
+//  void body.offsetHeight; // trigger reflow
+//  body.style.pointerEvents = '';
+//}, 1000);
 
 
 //Kickass game
@@ -172,6 +172,7 @@ setInterval(() => {
   // Expose globally
   window.toggleShooterGame = toggleShooterGame;
 })();
+
 
 
 
