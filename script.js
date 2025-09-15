@@ -175,15 +175,34 @@ window.addEventListener('load', () => {
 
 
 
-let konami = [38,38,40,40,37,39,37,39,66,65];
-let input = [];
-document.addEventListener("keydown", e => {
-  input.push(e.keyCode);
-  if (input.toString().indexOf(konami) >= 0) {
-    openModal('tetris-modal'); // or trigger another hidden thing
-    input = [];
+// Konami code sequence
+const konami = [
+  "ArrowUp", "ArrowUp",
+  "ArrowDown", "ArrowDown",
+  "ArrowLeft", "ArrowRight",
+  "ArrowLeft", "ArrowRight",
+  "b", "a"
+];
+let position = 0;
+
+document.addEventListener("keydown", (e) => {
+  // Prevent scrolling when using arrow keys during sequence
+  if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+    e.preventDefault();
+  }
+
+  // Check the current key against the sequence
+  if (e.key === konami[position]) {
+    position++;
+    if (position === konami.length) {
+      alert("Boo!");
+      position = 0; // reset after success
+    }
+  } else {
+    position = 0; // reset if wrong key
   }
 });
+
 
 
 
