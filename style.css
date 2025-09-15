@@ -1,0 +1,314 @@
+html, body {
+  height: 100%;
+}
+
+body {
+
+  cursor: url('George.png'), auto;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #f2f2f2; /* off-white/grey */
+/*  background-image: url('EDIT%20Logo.png'); /* Replace with your actual logo file name */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 800px; /* Adjust size as needed */
+  opacity: 1; /* Keep full page visible */
+}
+
+/* ✅ Override link cursor */
+a, a:hover {
+  cursor: inherit !important;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill without distortion */
+  z-index: 0; /* Behind everything */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* white haze */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.catalogue-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; /* Adjust size as needed */
+  z-index: 2;
+  opacity: 1 !important;
+  transition: opacity 1s ease-in;
+}
+
+
+
+.catalogue-title {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 65px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #161616;
+  text-align: center;
+  z-index: 2; /* Ensures it's above background but below interactive elements */
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.center-box {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking if inside flex */
+}
+
+.center-box h1 {
+  margin-bottom: 20px;
+}
+
+.center-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.center-box button:hover {
+  background-color: #0056b3;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: row;   /* Keep them in a row */
+  justify-content: center; /* Centers them horizontally */
+  gap: 20px;             /* Space between them */
+  margin: 40px;          /* Space around the whole row */
+  flex-wrap: nowrap;     /* Prevent wrapping on smaller screens */
+   flex-shrink: 0;
+  text-align: center;
+}
+
+
+.sidebar ul {
+  columns: 2;       /* split into 2 columns */
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  column-gap: 2rem; /* space between columns */
+  list-style-position: inside; /* optional for nicer alignment */
+}
+
+
+.sidebar, .sidebar2, .sidebar3, .sidebar4 {
+  position: relative;  /* Add this */
+  z-index: 3;          /* Higher than 1 */
+ /* width: 250px;  */
+  width: 20%;
+  flex-shrink: 0;        /* Prevent shrinking */
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.sidebar h2, .sidebar2 h2, .sidebar3 h2, .sidebar4 h2 {
+  margin-top: 0;
+}
+
+.sidebar ul, .sidebar2 ul, .sidebar3 ul, .sidebar4 ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li, .sidebar2 li, .sidebar3 li, .sidebar4 li {
+  margin: 8px 0;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  width: 100%;
+  min-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table caption {
+  caption-side: top;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+p.bold {
+  caption-side: top;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.styled-table thead tr {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #e6f7ff;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Changed from left to right */
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Glassmorphism effect */
+.center-box, .sidebar, .sidebar2, .sidebar3, .sidebar4 {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover animation */
+.catalogue-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.catalogue-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Apply fade only to wrapper */
+.fade-wrapper {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+
+/* All link states */
+a:link,
+a:visited {
+  color: #1a73e8;   /* your preferred color */
+  text-decoration: none; /* remove underline if you want */
+}
+
+/* Hover state */
+a:hover {
+  color: #0c54b3;   /* slightly darker on hover */
+  text-decoration: underline; /* optional */
+}
+
+/* Active state (while clicking) */
+a:active {
+  color: #1a73e8;
+}
+
+/*
+/* Tetris Bubble Styles 
+#tetris-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6f61;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1100;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+#tetris-bubble:hover {
+  transform: scale(1.05);
+  background-color: #ff3b2e;
+}
+
+/* Tetris Modal adjustments 
+#tetris-modal .modal-content {
+  background-color: #000; /* black for arcade feel 
+  padding: 0;
+  border-radius: 10px;
+}
+#tetris-modal .close-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white;
+  font-size: 1.5em;
+} 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
