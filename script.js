@@ -212,3 +212,56 @@ document.addEventListener("keydown", (e) => {
     position = 0; // reset if wrong key
   }
 });
+
+
+
+
+
+
+// --- Bulletproof secret-area creator (paste at end of script.js) ---
+(function createSecretArea() {
+  // create element
+  const box = document.createElement('div');
+  box.id = 'secret-area';
+  box.setAttribute('aria-hidden', 'true');
+
+  // style inline to avoid stylesheet stacking/context surprises
+  Object.assign(box.style, {
+    position: 'fixed',
+    top: '18px',
+    left: '18px',
+    width: '64px',               // bigger so easy to click while testing
+    height: '64px',
+    background: 'rgba(255,0,0,0.45)', // visible for testing
+    zIndex: '99999',
+    pointerEvents: 'auto',
+    cursor: 'default'
+  });
+
+  // append to body as last child (guaranteed top-level)
+  document.body.appendChild(box);
+
+  // attach click handler
+  box.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // open your secret modal
+    const secretModal = document.getElementById('secret-modal');
+    if (secretModal) {
+      secretModal.style.display = 'block';
+    } else {
+      alert("Secret triggered! (modal not found)");
+    }
+  });
+
+  // convenience: press 'D' to toggle debug visibility
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key.toLowerCase() === 'd') {
+      box.style.background = box.style.background === 'transparent' ? 'rgba(255,0,0,0.45)' : 'transparent';
+    }
+  });
+
+  // once you've tested, hide it automatically (comment this out if you want to keep visible)
+  setTimeout(() => {
+    box.style.background = 'transparent';
+  }, 4500); // visible for 4.5s then becomes invisible (but still clickable)
+})();
