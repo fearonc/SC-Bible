@@ -301,7 +301,7 @@ a:active {
   height: 42px;
   background: transparent; /* completely invisible */
   opacity: 0;              /* ensure invisibility */
-  z-index: 2500;           /* above most elements but below any dev overlays */
+  z-index: 3000;           /* above most elements but below any dev overlays */
   cursor: default;         /* ensure cursor doesn't change on hover */
   pointer-events: auto;    /* make sure it can be clicked */
   /* prevent focus outline if accidentally keyboard focused */
@@ -360,6 +360,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
