@@ -146,6 +146,24 @@ function draw() {
 }
 
 // Drop the piece by one row
+//function drop() {
+//  currentPiece.pos.y++;
+//  if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
+//    currentPiece.pos.y--;
+//    merge(board, [currentPiece.matrix, currentPiece.pos]);
+//    clearLines();
+//    currentPiece = createPiece();
+//    if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
+//      alert("Game Over! Resetting...");
+//      initGame();
+//    }
+//  }
+//  dropCounter = 0;
+//}
+
+
+
+// Drop the piece by one row
 function drop() {
   currentPiece.pos.y++;
   if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
@@ -153,13 +171,20 @@ function drop() {
     merge(board, [currentPiece.matrix, currentPiece.pos]);
     clearLines();
     currentPiece = createPiece();
-  //  if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
-  //    alert("Game Over! Resetting...");
-  //    initGame();
-  //  }
+    if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
+      // Instead of alert, stop the game loop
+      cancelAnimationFrame(animationId); // if you're using requestAnimationFrame
+      gameOver = true;
+
+      
+      return; // don’t restart automatically
+    }
   }
-  dropCounter = 0;
-}
+  dropC
+
+
+
+
 
 // Move piece left or right
 function move(dir) {
@@ -261,6 +286,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
 document.getElementById('resetBtn').addEventListener('click', () => {
   initGame();
 });
+
 
 
 
