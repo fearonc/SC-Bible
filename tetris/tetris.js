@@ -153,10 +153,10 @@ function drop() {
     merge(board, [currentPiece.matrix, currentPiece.pos]);
     clearLines();
     currentPiece = createPiece();
-    if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
-      alert("Game Over! Resetting...");
-      initGame();
-    }
+  //  if (collides(board, [currentPiece.matrix, currentPiece.pos])) {
+  //    alert("Game Over! Resetting...");
+  //    initGame();
+  //  }
   }
   dropCounter = 0;
 }
@@ -261,6 +261,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
 document.getElementById('resetBtn').addEventListener('click', () => {
   initGame();
 });
+
 
 
 
