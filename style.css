@@ -109,6 +109,7 @@ a, a:hover {
   flex-wrap: nowrap;     /* Prevent wrapping on smaller screens */
    flex-shrink: 0;
   text-align: center;
+  color: #933193cc;
 }
 
 
@@ -283,20 +284,19 @@ p.bold {
 /* All link states */
 a:link,
 a:visited {
-  color: #1a73e8;   /* your preferred color */
+  color: #b32fd0ab;   /* your preferred color */
   text-decoration: none; /* remove underline if you want */
 }
 
 /* Hover state */
 a:hover {
-  color: #0c54b3;   /* slightly darker on hover */
+  color: #9e55aa;   /* slightly darker on hover */
   text-decoration: underline; /* optional */
 }
 
 /* Active state (while clicking) */
 a:active {
-  color: #1a73e8;
-}
+  color: #9e55aa;
 
 /*
 /* Tetris Bubble Styles 
@@ -333,6 +333,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
