@@ -252,16 +252,8 @@ p.bold {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  border: 2px solid #fd7bc2; /* bright neon pink */
-  border-radius: 12px;
-
-  /* neon glow effect */
-  box-shadow:
-    0 0 2px #ff008d,
-    0 0 50px #ffffff,
-    0 0 10px #ffffff,
-    0 0 30px #ff008d;
+  border: 2px solid rgb(255 0 141 / 45%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Button hover animation */
@@ -333,6 +325,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
