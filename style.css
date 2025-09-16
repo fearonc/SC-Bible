@@ -120,7 +120,7 @@ a, a:hover {
   list-style-position: inside; /* optional for nicer alignment */
 }
 
-.sidebar 2 ul {
+.sidebar2 ul {
   columns: 2;       /* split into 2 columns */
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -128,7 +128,7 @@ a, a:hover {
   list-style-position: inside; /* optional for nicer alignment */
 }
 
-.sidebar 3 ul {
+.sidebar3 ul {
   columns: 2;       /* split into 2 columns */
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -136,7 +136,7 @@ a, a:hover {
   list-style-position: inside; /* optional for nicer alignment */
 }
 
-.sidebar 4 ul {
+.sidebar4 ul {
   columns: 2;       /* split into 2 columns */
   -webkit-columns: 2;
   -moz-columns: 2;
@@ -317,6 +317,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
