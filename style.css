@@ -144,7 +144,15 @@ a, a:hover {
   list-style-position: inside; /* optional for nicer alignment */
 }
 
-.sidebar, .sidebar2, .sidebar3, .sidebar4 {
+.sidebar5 ul {
+  columns: 2;       /* split into 2 columns */
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  column-gap: 2rem; /* space between columns */
+  list-style-position: inside; /* optional for nicer alignment */
+}
+
+.sidebar, .sidebar2, .sidebar3, .sidebar4, .sidebar5 {
   position: relative;  /* Add this */
   z-index: 3;          /* Higher than 1 */
  /* width: 250px;  */
@@ -156,16 +164,16 @@ a, a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.sidebar h2, .sidebar2 h2, .sidebar3 h2, .sidebar4 h2 {
+.sidebar h2, .sidebar2 h2, .sidebar3 h2, .sidebar4 h2, .sidebar5 h2 {
   margin-top: 0;
 }
 
-.sidebar ul, .sidebar2 ul, .sidebar3 ul, .sidebar4 ul {
+.sidebar ul, .sidebar2 ul, .sidebar3 ul, .sidebar4 ul, .sidebar5 ul {
   list-style: none;
   padding-left: 0;
 }
 
-.sidebar li, .sidebar2 li, .sidebar3 li, .sidebar4 li {
+.sidebar li, .sidebar2 li, .sidebar3 li, .sidebar4 li, .sidebar5 li {
   margin: 8px 0;
 }
 
@@ -243,8 +251,16 @@ p.bold {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  border: 2px solid #fd7bc2; /* bright neon pink */
+  border-radius: 12px;
+
+  /* neon glow effect */
+  box-shadow:
+    0 0 2px #ff008d,
+    0 0 50px #ffffff,
+    0 0 10px #ffffff,
+    0 0 30px #ff008d;
 }
 
 /* Button hover animation */
@@ -317,6 +333,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
