@@ -290,6 +290,41 @@ a:hover {
 a:active {
   color: #9e55aa;
 
+
+/* Invisible secret click area */
+#secret-area {
+  position: fixed;
+  /* position the box where you want it on-screen */
+  top: 18px;      /* tweak these to place the secret area */
+  left: 18px;     /* e.g. near the logo or in a corner */
+  width: 42px;    /* small clickable area */
+  height: 42px;
+  background: transparent; /* completely invisible */
+  opacity: 0;              /* ensure invisibility */
+  z-index: 2500;           /* above most elements but below any dev overlays */
+  cursor: default;         /* ensure cursor doesn't change on hover */
+  pointer-events: auto;    /* make sure it can be clicked */
+  /* prevent focus outline if accidentally keyboard focused */
+  outline: none;
+}
+
+/* make sure it doesn't show any focus ring */
+#secret-area:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: style for the secret modal - reuse your .modal/.modal-content if you already have them */
+#secret-modal .modal-content {
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 460px;
+  text-align: center;
+}
+
+  
+
+  
 /*
 /* Tetris Bubble Styles 
 #tetris-bubble {
@@ -325,6 +360,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
