@@ -106,7 +106,7 @@ a, a:hover {
   justify-content: center; /* Centers them horizontally */
   gap: 20px;             /* Space between them */
   margin: 40px;          /* Space around the whole row */
-  flex-wrap: nowrap;     /* Prevent wrapping on smaller screens */
+  flex-wrap: wrap;     /* wrap on smaller screens */
    flex-shrink: 0;
   text-align: center;
   color: #933193cc;
@@ -326,6 +326,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
