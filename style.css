@@ -268,7 +268,7 @@ p.bold {
 
 /* Apply fade only to wrapper */
 .fade-wrapper {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s ease-in;
 }
 
@@ -326,6 +326,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
