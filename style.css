@@ -251,7 +251,7 @@ p.bold {
 }
 
 /* Glassmorphism effect */
-.center-box, .sidebar, .sidebar2, .sidebar3, .sidebar4 {
+.center-box, .sidebar, .sidebar2, .sidebar3, .sidebar4, sidebar5 {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -329,6 +329,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
