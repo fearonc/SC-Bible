@@ -160,7 +160,7 @@ a, a:hover {
 .sidebar, .sidebar2, .sidebar3, .sidebar4, .sidebar5 {
   position: relative;  /* Add this */
   z-index: 3;          /* Higher than 1 */
- /* width: 250px;  */
+ /* width: 250px;  
   width: 20%;
   flex-shrink: 0;        /* Prevent shrinking 
   padding: 20px;
@@ -170,11 +170,23 @@ a, a:hover {
 }
 */
 
+
 .sidebar, .sidebar2, .sidebar3, .sidebar4, .sidebar5 {
-  flex: 1 1 0;    /* allow flexbox to size them evenly */
-  min-width: 180px; /* optional safeguard for small screens */
-  max-width: 20%;   /* still caps them at 20% */
+  position: relative;
+  z-index: 3;
+
+  /* 🔄 Size behavior */
+  flex: 1 1 0;        /* each grows/shrinks evenly */
+  max-width: 20%;     /* never bigger than 20% */
+  min-width: 200px;   /* prevents them from getting too tiny on narrow screens */
+
+  /* 🎨 Styling */
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 
 
 
@@ -340,6 +352,7 @@ a:active {
   font-size: 1.5em;
 } 
 */
+
 
 
 
